@@ -264,25 +264,27 @@ extension ViewController: CardCellDelegate {
             }
             // Le agrego una accion al alert
             let alertAction = UIAlertAction(title: "Aceptar", style: .default) { (_) in
+                // Obtiene el textfield
                 let textField = alert.textFields?[0]
                 
-                
+                // Guarda el usuario cada vez que le da aceptar y cuando no guarda correctamente al usuario
                 UserManager.sharedManager.saveUser(name: textField?.text ?? "Sin nombre", score: 0, isWinner: false, completion: { str in
                     
                 })
+                // Cuiando le doy aceptar se crea otra alerta csi el usuario quiere seguir jugando y creo dos opciones de si o no
                 
                 let alert = UIAlertController(title: "Poker 21", message:  "¿Deseas seguir jugando?", preferredStyle: .alert)
-                
+                // cuando funciona SI llama a las funcionas, Reinicia, agrega la vista del fondo negro, y iniciliza el timer
                 let yesAction = UIAlertAction(title: "Sí", style: .default) { (_) in
                     self.reiniciateGame()
                     self.addCountView()
                     self.initTimer()
                 }
-                
+                // Cuand es No se llama manda a la pantalla principal, de esta vista hacemos un pop, entonces lo que hace es retroceder a la antigua vista
                 let noAction = UIAlertAction(title: "No", style: .default) { (_) in
                     self.navigationController?.popViewController(animated: true)
                 }
-                
+                // Agrega los opcion
                 alert.addAction(yesAction)
                 alert.addAction(noAction)
                 self.present(alert, animated: true, completion: nil)
@@ -290,30 +292,32 @@ extension ViewController: CardCellDelegate {
             }
             
             alert.addAction(alertAction)
+            // hace un present para que se muestre en esa vista
             self.present(alert, animated: true, completion: nil)
             
+            //Valida si el numero de cartas es 1 y la tercera carta es 21,e entonces gana a la primera
         } else {
             if countCards == 1 && current == 21 {
                 let alert = UIAlertController(title: "Poker 21", message: "FELICIDADES GANASTE A LA PRIMERA!, OBTUVISTE EL MEJOR PUNTAJE, 100 PUNTOS!", preferredStyle: .alert)
-                
+                //Agregas el campo textfiled
                 alert.addTextField { (textField) in
                     textField.placeholder = "Ingresa tu nombre"
                 }
-                
+                // crear accion para agregar al alert
                 let alertAction = UIAlertAction(title: "Aceptar", style: .default) { (_) in
                     let textField = alert.textFields?[0]
                     UserManager.sharedManager.saveUser(name: textField?.text ?? "Sin nombre", score: self.score, isWinner: true, completion: { str in
                         
                     })
-                    
+                    // Crea otro alert para que te pregunte si quieres seguir jugando o no
                     let alert = UIAlertController(title: "Poker 21", message:  "¿Deseas seguir jugando?", preferredStyle: .alert)
-                    
+                    // Si es si, se reinicia el juego, se pinta la vista, iniciliza el timer
                     let yesAction = UIAlertAction(title: "Sí", style: .default) { (_) in
                         self.reiniciateGame()
                         self.addCountView()
                         self.initTimer()
                     }
-                    
+                    //Regresa a la pantalla de home
                     let noAction = UIAlertAction(title: "No", style: .default) { (_) in
                         self.navigationController?.popViewController(animated: true)
                     }
@@ -326,9 +330,12 @@ extension ViewController: CardCellDelegate {
                 
                 alert.addAction(alertAction)
                 self.present(alert, animated: true, completion: nil)
-            } else if current == 21 {
                 
+                // Si llega a ser 21
+            } else if current == 21 {
+                // score menos 5
                 score -= 5
+                // seteo el sscore
                 lblScore.text = "Puntuación: \(score)"
                 
                 let alert = UIAlertController(title: "Poker 21", message: "FELICIDADES GANASTE, OBTUVISTE UN PUNTAJE DE \(score)", preferredStyle: .alert)
@@ -388,7 +395,7 @@ extension ViewController: CardCellDelegate {
                         self.addCountView()
                         self.initTimer()
                     }
-                    
+                    //accion cuando se pone en no y te regresa a la pantalla principal
                     let noAction = UIAlertAction(title: "No", style: .default) { (_) in
                         self.navigationController?.popViewController(animated: true)
                     }
