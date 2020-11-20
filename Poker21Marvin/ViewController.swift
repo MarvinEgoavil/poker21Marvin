@@ -181,7 +181,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         }
     }
     
-    // Te llena la celda a cada colelectionview de acuerdo a la lista
+    // Te llena la celda a cada collectionview de acuerdo a la lista
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // Validamos si es el collectionview A, y si es lo llenamos

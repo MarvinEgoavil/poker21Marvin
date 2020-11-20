@@ -10,7 +10,7 @@ import UIKit
 // Es el viewControler  donde se refleja los puntajes, este es un View Controller, dentro ponemos uhn tableviewController para listar los usuarios con sus puntajes respectivos
 class ScoreViewController: UIViewController {
 
-    //Hago una referencia del Storyboard al view controlller
+    //Hago una referencia del Storyboard al view controller
     @IBOutlet weak var tbScore: UITableView!
 
     // Creamos una lista de tipo user del modelo de coredata

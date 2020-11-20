@@ -2,7 +2,7 @@
 //  ScoreTableViewCell.swift
 //  Poker21Marvin
 //
-//  Created by user177281 on 20/11/2020.
+//  Created by user177281 on 15/11/2020.
 //
 
 import UIKit
@@ -24,6 +24,7 @@ class ScoreTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // Esta funcion recibe el booleano, el nombre y el string, para poder pintar en el label de la lista, si isWinner es true es verde si es false rosa y pinta el score
     func setData(isWinner: Bool, name: String, score: Int) {
         lblName.text = name
         viewResult.backgroundColor = isWinner ? #colorLiteral(red: 0, green: 0.5647058824, blue: 0.3176470588, alpha: 1) : #colorLiteral(red: 0.9411764706, green: 0.4431372549, blue: 0.5019607843, alpha: 1)
