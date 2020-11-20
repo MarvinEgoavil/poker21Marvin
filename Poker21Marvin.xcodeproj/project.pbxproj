@@ -8,22 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		DE0E085F256783FA00CF6029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E085E256783FA00CF6029 /* AppDelegate.swift */; };
-		DE0E0861256783FA00CF6029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0860256783FA00CF6029 /* SceneDelegate.swift */; };
 		DE0E0863256783FA00CF6029 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0862256783FA00CF6029 /* ViewController.swift */; };
 		DE0E0866256783FA00CF6029 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0E0864256783FA00CF6029 /* Main.storyboard */; };
 		DE0E0868256783FC00CF6029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE0E0867256783FC00CF6029 /* Assets.xcassets */; };
 		DE0E086B256783FC00CF6029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0E0869256783FC00CF6029 /* LaunchScreen.storyboard */; };
+		DE0E0876256784D200CF6029 /* BaseDatos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0874256784D200CF6029 /* BaseDatos.xcdatamodeld */; };
+		DE0E087A256785FF00CF6029 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0879256785FF00CF6029 /* UserManager.swift */; };
+		DE0E0880256786B800CF6029 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E087E256786B800CF6029 /* CardCollectionViewCell.swift */; };
+		DE0E0881256786B800CF6029 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE0E087F256786B800CF6029 /* CardCollectionViewCell.xib */; };
+		DE0E08862567874400CF6029 /* ScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E08842567874400CF6029 /* ScoreTableViewCell.swift */; };
+		DE0E08872567874400CF6029 /* ScoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE0E08852567874400CF6029 /* ScoreTableViewCell.xib */; };
+		DE0E088A256788BD00CF6029 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0889256788BD00CF6029 /* ScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE0E085B256783FA00CF6029 /* Poker21Marvin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poker21Marvin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0E085E256783FA00CF6029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE0E0860256783FA00CF6029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DE0E0862256783FA00CF6029 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE0E0865256783FA00CF6029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE0E0867256783FC00CF6029 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE0E086A256783FC00CF6029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE0E086C256783FC00CF6029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE0E0875256784D200CF6029 /* BaseDatos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BaseDatos.xcdatamodel; sourceTree = "<group>"; };
+		DE0E0879256785FF00CF6029 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		DE0E087E256786B800CF6029 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE0E087F256786B800CF6029 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		DE0E08842567874400CF6029 /* ScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewCell.swift; sourceTree = "<group>"; };
+		DE0E08852567874400CF6029 /* ScoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreTableViewCell.xib; sourceTree = "<group>"; };
+		DE0E0889256788BD00CF6029 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,37 @@
 		DE0E085D256783FA00CF6029 /* Poker21Marvin */ = {
 			isa = PBXGroup;
 			children = (
+				DE0E087D2567864600CF6029 /* Cell */,
+				DE0E0878256785DC00CF6029 /* CoreData */,
 				DE0E085E256783FA00CF6029 /* AppDelegate.swift */,
-				DE0E0860256783FA00CF6029 /* SceneDelegate.swift */,
 				DE0E0862256783FA00CF6029 /* ViewController.swift */,
 				DE0E0864256783FA00CF6029 /* Main.storyboard */,
 				DE0E0867256783FC00CF6029 /* Assets.xcassets */,
 				DE0E0869256783FC00CF6029 /* LaunchScreen.storyboard */,
 				DE0E086C256783FC00CF6029 /* Info.plist */,
+				DE0E0874256784D200CF6029 /* BaseDatos.xcdatamodeld */,
+				DE0E0889256788BD00CF6029 /* ScoreViewController.swift */,
 			);
 			path = Poker21Marvin;
+			sourceTree = "<group>";
+		};
+		DE0E0878256785DC00CF6029 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DE0E0879256785FF00CF6029 /* UserManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		DE0E087D2567864600CF6029 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DE0E087E256786B800CF6029 /* CardCollectionViewCell.swift */,
+				DE0E087F256786B800CF6029 /* CardCollectionViewCell.xib */,
+				DE0E08842567874400CF6029 /* ScoreTableViewCell.swift */,
+				DE0E08852567874400CF6029 /* ScoreTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +158,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0E08872567874400CF6029 /* ScoreTableViewCell.xib in Resources */,
+				DE0E0881256786B800CF6029 /* CardCollectionViewCell.xib in Resources */,
 				DE0E086B256783FC00CF6029 /* LaunchScreen.storyboard in Resources */,
 				DE0E0868256783FC00CF6029 /* Assets.xcassets in Resources */,
 				DE0E0866256783FA00CF6029 /* Main.storyboard in Resources */,
@@ -137,9 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0E088A256788BD00CF6029 /* ScoreViewController.swift in Sources */,
 				DE0E0863256783FA00CF6029 /* ViewController.swift in Sources */,
 				DE0E085F256783FA00CF6029 /* AppDelegate.swift in Sources */,
-				DE0E0861256783FA00CF6029 /* SceneDelegate.swift in Sources */,
+				DE0E087A256785FF00CF6029 /* UserManager.swift in Sources */,
+				DE0E0880256786B800CF6029 /* CardCollectionViewCell.swift in Sources */,
+				DE0E08862567874400CF6029 /* ScoreTableViewCell.swift in Sources */,
+				DE0E0876256784D200CF6029 /* BaseDatos.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +379,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DE0E0874256784D200CF6029 /* BaseDatos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DE0E0875256784D200CF6029 /* BaseDatos.xcdatamodel */,
+			);
+			currentVersion = DE0E0875256784D200CF6029 /* BaseDatos.xcdatamodel */;
+			path = BaseDatos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DE0E0853256783FA00CF6029 /* Project object */;
 }
